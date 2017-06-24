@@ -61,7 +61,7 @@ Self-Driving Car Engineer Nanodegree Program
 
 * The Model: This MPC project uses the kinematic model introduced in the course material. It has 6 states i.e. position x, position y, vehicle speed v, vehicle yaw angle, tracking position error (vehicle y - desired y as function of x) and tracking vehicle yaw error (vehicle yaw - desired yaw as function of x). The model also contains two actuators: front wheel steering angle, and vehicle acceleration (throttle). 
 
-* Timestep Length and Elapsed Duration (N & dt): dt is set as simulation time 0.1s. N is set at 20 meaning totally the system looks ahead 2s.  Different values were tried, e.g. N = 25, dt=0.1; N=40, dt=0.05. Bad combination of different dt, N and weights in the cost function could lead to instability. Suggest Udacity to including very basic stability analysis material (NOT JUST CODING). 
+* Timestep Length and Elapsed Duration (N & dt): dt is set as 0.1s. N is set at 20 meaning totally the system looks ahead 2s.  Different values were tried, e.g. N = 25, dt=0.1; N=40, dt=0.05. Bad combination of different dt, N and weights in the cost function could lead to instability. Suggest Udacity to including very basic stability analysis material (NOT JUST CODING). 
 
 * Polynomial Fitting and MPC Preprocessing: third order polynomial was chosen. The way-points were first converted to vehicle coordination system from global coordination system. Then the new way-points in vehicle coordination system were fit by 3th order polynomial curve, which was passed through MPC solver. 
 
